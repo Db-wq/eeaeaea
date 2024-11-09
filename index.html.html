@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Anime Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background-color: #f0f0f0; }
+        .button { padding: 20px 40px; font-size: 2em; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+        .output { font-size: 1.5em; margin-top: 20px; padding: 20px; background-color: #fff; border: 1px solid #ddd; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Random Anime Generator</h1>
+    <p>Click the button to generate a random anime title:</p>
+    <button class="button" onclick="generateRandomAnime()">Generate Anime</button>
+    <div class="output">
+        <p id="animeTitle">-</p>
+    </div>
+
+    <script>
+        const animeList = [
+            "Naruto", "Attack on Titan", "One Piece", "My Hero Academia", "Demon Slayer",
+            "Death Note", "Fullmetal Alchemist: Brotherhood", "One Punch Man", "Dragon Ball Z", "Tokyo Ghoul",
+            "Hunter x Hunter", "Sword Art Online", "Bleach", "Your Name", "Neon Genesis Evangelion",
+            "Mob Psycho 100", "Cowboy Bebop", "Naruto Shippuden", "Fairy Tail", "Black Clover",
+            "My Hero Academia: Two Heroes", "Steins;Gate", "Re:Zero", "The Seven Deadly Sins", "Fruits Basket",
+            "Gintama", "Soul Eater", "Sword Art Online: Alicization", "JoJo's Bizarre Adventure", "Boku no Hero Academia",
+            "Akira", "Code Geass", "Tokyo Revengers", "Shingeki no Kyojin", "Angel Beats",
+            "Black Lagoon", "D.Gray-man", "Bleach: Thousand-Year Blood War", "Digimon", "Nodame Cantabile",
+            "Yuri on Ice", "Violet Evergarden", "A Silent Voice", "Clannad", "Fairy Tail: Final Series",
+            "Akame ga Kill!", "Inuyasha", "Hunter x Hunter (2011)", "Mushoku Tensei", "Neon Genesis Evangelion: The End of Evangelion",
+            "Great Teacher Onizuka", "Overlord", "Mob Psycho 100 II", "The Promised Neverland", "Slam Dunk",
+            "Toradora!", "Cowboy Bebop: The Movie", "The Rising of the Shield Hero", "Attack on Titan: The Final Season",
+            "Naruto: Shippuden Movie", "Bleach: Hell Verse", "Angel Beats!", "Gurren Lagann", "Hellsing Ultimate",
+            "Black Clover: Sword of the Wizard King", "Dragon Ball Super", "InuYasha: The Final Act", "No Game No Life", "March Comes in Like a Lion",
+            "Trickster", "Haikyuu!!", "JoJo's Bizarre Adventure: Golden Wind", "Hyouka", "Hunter x Hunter (1999)",
+            "Fate/Zero", "Elfen Lied", "Bunny Girl Senpai", "Rising of the Shield Hero", "The Ancient Magus' Bride",
+            "Kaguya-sama: Love is War", "Psycho-Pass", "Mob Psycho 100 III", "One Punch Man 2", "The Promised Neverland Season 2",
+            "Black Clover: The Final Battle", "The Tatami Galaxy", "Mob Psycho 100 II", "K-On!", "Durarara!!", 
+            "Trigun", "Lupin III", "Alderamin on the Sky", "Gurren Lagann", "Yona of the Dawn",
+            "Fate/Stay Night", "Toradora!", "Yu Yu Hakusho", "Noir", "Magi: The Labyrinth of Magic", 
+            "JoJo's Bizarre Adventure: Diamond is Unbreakable", "The Legend of Heroes", "Huntik", "Parasyte", 
+            "Beelzebub", "March Comes in Like a Lion 2nd Season", "Kakegurui", "Wotakoi: Love is Hard for Otaku", "Devilman Crybaby"
+        ];
+
+        function generateRandomAnime() {
+            const randomIndex = Math.floor(Math.random() * animeList.length);
+            const randomAnime = animeList[randomIndex];
+            document.getElementById('animeTitle').textContent = randomAnime;
+        }
+    </script>
+</body>
+</html>
